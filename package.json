@@ -1,0 +1,31 @@
+{
+  "name": "react-number2words",
+  "version": "1.0.0",
+  "description": "React component that converts number to words",
+  "main": "index.js",
+  "scripts": {
+    "build": "rd -r ./dist && tsc",
+    "test": "jest --watchAll",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
+    "prepare": "npm test && npm lint && npm build"
+  },
+  "author": "Prajwal Simkhada",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/jest": "^23.3.10",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^23.6.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
+  }
+}
