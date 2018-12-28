@@ -10,7 +10,7 @@
     "lint": "tslint -c tslint.json --project tsconfig.json",
     "copy": "cpx package.json dist && cpx README.md dist",
     "npm-package": "npm run build && npm run copy && cd dist && npm pack",
-    "publish": "npm publish dist"
+    "npm-publish": "npm publish dist"
   },
   "author": "Prajwal Simkhada",
   "license": "MIT",
