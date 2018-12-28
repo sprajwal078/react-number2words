@@ -11,8 +11,8 @@ export class ConverterUtil {
 
   constructor(
     value: number | string,
-    tenthMapping: any = WORD_MAPPING.international.en.tenths,
-    subHundredMapping: any = WORD_MAPPING.international.en.subHundreds,
+    tenthMapping: any = WORD_MAPPING.international.en!.tenths,
+    subHundredMapping: any = WORD_MAPPING.international.en!.subHundreds,
     max: number = (1000 * WordValues.trillion - 1),
     decimalNotation = 'point',
     negativeNotation = 'minus'
