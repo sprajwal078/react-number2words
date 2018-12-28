@@ -21,7 +21,7 @@ then use `toWords` pipe wherever required
 ```html
 <Number2Words value={14600728195} />
 ```
-will output
+will output\
 `fourteen billion six hundred million seven hundred twenty eight thousand one hundred ninety five`
 
 ```html
@@ -42,13 +42,13 @@ Currently only Nepali language is supported. This is because Nepali is my native
 ```html
 <Number2Words value={14600728195} system={hinduArabic} language="np"/>
 ```
-will output
+will output\
 `चौध अर्ब साठ्ठी करोड सात लाख अठ्ठाइस हजार एक सय पन्चान्नब्बे`
 
 ```html
 <Number2Words value={26.54} system={hinduArabic} language="np"/>
 ```
-will output
+will output\
 `छब्बीस दशमलब पाँच चार`
 
 ## TODO
