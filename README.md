@@ -1,5 +1,5 @@
 # React Number2words
-React coomponent to convert number into words.
+React component to convert number into words.
 
 ## Installation
 ```bash
@@ -27,14 +27,14 @@ will output
 ```html
 <Number2Words value={12.32} />
 ```
-will output
+will output\
 `twelve point three two`
 
 ## Hindu-Arabic System
 ```html
 <Number2Words value={235678943226} system={hinduArabic}/>
 ```
-will output
+will output\
 `two kharab thirty five arab sixty seven crore eighty nine lakh forty three thousand two hundred twenty six`
 
 ### Hindu Arabic - Language Support
