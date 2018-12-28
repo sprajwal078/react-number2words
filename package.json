@@ -4,10 +4,12 @@
   "description": "React component that converts number to words",
   "main": "index.js",
   "scripts": {
-    "build": "rd -r ./dist && tsc",
-    "test": "jest --watchAll",
+    "pre-build": "jest -u && npm run lint",
+    "build": "npm run pre-build && tsc",
+    "test": "jest -u --watchAll",
     "lint": "tslint -c tslint.json --project tsconfig.json",
-    "prepare": "npm test && npm lint && npm build"
+    "copy": "cpx package.json dist",
+    "npm-package": "npm run build && npm run copy && cd dist && npm pack"
   },
   "author": "Prajwal Simkhada",
   "license": "MIT",
@@ -17,6 +19,7 @@
     "@types/jest": "^23.3.10",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
+    "cpx": "^1.5.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",

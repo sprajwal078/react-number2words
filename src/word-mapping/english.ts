@@ -12,7 +12,7 @@ export const TENTH_MAPPING_EN: any = {
   1000:          'thousand',
   1000000:       'million',
   1000000000:    'billion',
-  1000000000000: 'trillion',
+  1000000000000: 'trillion'
 };
 
 export const SUB_TWENTIES_MAPPING_EN = {
@@ -35,7 +35,7 @@ export const SUB_TWENTIES_MAPPING_EN = {
   16: 'sixteen',
   17: 'seventeen',
   18: 'eighteen',
-  19: 'nineteen',
+  19: 'nineteen'
 };
 
 export const HINDU_ARABIC_TENTH_MAPPING_EN: any = {
@@ -53,5 +53,5 @@ export const HINDU_ARABIC_TENTH_MAPPING_EN: any = {
   100000:       'lakh',
   10000000:     'crore',
   1000000000:   'arab',
-  100000000000: 'kharab',
+  100000000000: 'kharab'
 };

@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Number2Words shows the current value of the component 1`] = `
+exports[`Hindu Arabic System English The text should be three fourteen arab sixty crore seven lakh twenty eight thousand one hundred ninety five 1`] = `
 <span
   className="number2words__container"
 >
-  three
+  fourteen arab sixty crore seven lakh twenty eight thousand one hundred ninety five
 </span>
 `;
 
-exports[`The text should be eight hundred ninety four 1`] = `
+exports[`Hindu Arabic System Nepali The text should be three चौध अर्ब साठ्ठी करोड सात लाख अठ्ठाइस हजार एक सय पन्चान्नब्बे 1`] = `
+<span
+  className="number2words__container"
+>
+  चौध अर्ब साठ्ठी करोड सात लाख अठ्ठाइस हजार एक सय पन्चान्नब्बे
+</span>
+`;
+
+exports[`International System The text should be eight hundred ninety four 1`] = `
 <span
   className="number2words__container"
 >
@@ -16,7 +24,7 @@ exports[`The text should be eight hundred ninety four 1`] = `
 </span>
 `;
 
-exports[`The text should be fourteen billion six hundred million seven hundred twenty eight thousand one hundred ninety five 1`] = `
+exports[`International System The text should be fourteen billion six hundred million seven hundred twenty eight thousand one hundred ninety five 1`] = `
 <span
   className="number2words__container"
 >
@@ -24,7 +32,7 @@ exports[`The text should be fourteen billion six hundred million seven hundred t
 </span>
 `;
 
-exports[`The text should be three 1`] = `
+exports[`International System The text should be three 1`] = `
 <span
   className="number2words__container"
 >
