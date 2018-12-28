@@ -2,10 +2,13 @@ import * as React from 'react';
 import { ConverterUtil } from './converterUtil';
 import { WORD_MAPPING } from './word-mapping';
 
+type NumberSystem = 'hinduArabic' | 'international';
+type Language = 'en' | 'np';
+
 interface Props {
   value: number | string;
-  system?: 'international' | 'hinduArabic';
-  language?: 'en' | 'np';
+  system?: NumberSystem;
+  language?: Language;
 }
 
 interface State {
@@ -14,33 +17,38 @@ interface State {
 
 class Number2Words extends React.Component<Props, State> {
 
-  componentWillMount() {
-    this.setWordValue();
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      words: this.getWords()
+    };
   }
 
-  componentDidUpdate() {
-    this.setWordValue();
+  componentDidUpdate(prevProps: Props) {
+    if (
+      prevProps.value !== this.props.value ||
+      prevProps.system !== this.props.system ||
+      prevProps.language !== this.props.language
+    ) {
+      this.setState({
+        words: this.getWords()
+      });
+    }
   }
 
-  setWordValue = () => {
+  getWords = () => {
+    const value = this.props.value;
     const system = this.props.system || 'international';
-    const language = this.getLanguage();
+    const language = system !== 'hinduArabic' ? 'en' : this.props.language || 'en';
     const util = new ConverterUtil(
-      this.props.value,
+      value,
       WORD_MAPPING[system][language]!.tenths,
       WORD_MAPPING[system][language]!.subHundreds,
       WORD_MAPPING[system][language]!.maxValue,
       WORD_MAPPING[system][language]!.decimalWord,
       WORD_MAPPING[system][language]!.negativeWord
     );
-    this.setState({ words: util.getWords() });
-  }
-
-  getLanguage = () => {
-    if (this.props.system === 'hinduArabic') {
-      return this.props.language || 'en';
-    }
-    return 'en';
+    return util.getWords();
   }
 
   render() {
