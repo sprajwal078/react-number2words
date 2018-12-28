@@ -1,6 +1,6 @@
 {
   "name": "react-number2words",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "React component that converts number to words",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,9 @@
     "build": "npm run pre-build && tsc",
     "test": "jest -u --watchAll",
     "lint": "tslint -c tslint.json --project tsconfig.json",
-    "copy": "cpx package.json dist",
-    "npm-package": "npm run build && npm run copy && cd dist && npm pack"
+    "copy": "cpx package.json dist && cpx README.md dist",
+    "npm-package": "npm run build && npm run copy && cd dist && npm pack",
+    "publish": "npm publish dist"
   },
   "author": "Prajwal Simkhada",
   "license": "MIT",
@@ -30,5 +31,19 @@
     "tslint": "^5.12.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sprajwal078/ng-number2words"
+  },
+  "keywords": [
+    "react",
+    "number",
+    "words",
+    "string",
+    "number to words",
+    "number to string",
+    "nepali",
+    "hindu arabic"
+  ]
 }
