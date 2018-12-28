@@ -1,6 +1,6 @@
 {
   "name": "react-number2words",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React component that converts number to words",
   "main": "index.js",
   "scripts": {
