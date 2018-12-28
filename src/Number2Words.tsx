@@ -15,6 +15,14 @@ interface State {
 class Number2Words extends React.Component<Props, State> {
 
   componentWillMount() {
+    this.setWordValue();
+  }
+
+  componentDidUpdate() {
+    this.setWordValue();
+  }
+
+  setWordValue = () => {
     const system = this.props.system || 'international';
     const language = this.getLanguage();
     const util = new ConverterUtil(
