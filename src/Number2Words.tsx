@@ -28,7 +28,7 @@ class Number2Words extends React.Component<Props, State> {
     this.setState({ words: util.getWords() });
   }
 
-  getLanguage() {
+  getLanguage = () => {
     if (this.props.system === 'hinduArabic') {
       return this.props.language || 'en';
     }
